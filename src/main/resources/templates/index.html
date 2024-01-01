@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <script defer type="text/javascript" th:src="@{/node_modules/jquery/dist/jquery.min.js}"></script>
+    <script defer type="text/javascript" th:src="@{/js/style.js}"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <link th:href="@{/node_modules/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet"/>
+    <script defer type="text/javascript" th:src="@{/node_modules/bootstrap/dist/js/bootstrap.min.js}"></script>
+    <script defer type="text/javascript" th:src="@{/node_modules/bootstrap/dist/js/bootstrap.bundle.js}"></script>
+    <title>Your Website</title>
+</head>
+<body>
+
+<div th:insert="/fragment/fragmentNavs::fragment-nav"></div>
+
+<div class="jumbotron">
+    <div class="rainbow-effect"></div>
+    <h1 class="display-4" >BELOG</h1>
+    <p class="lead">이 사이트는 개인 포트폴리오 저장용으로 제작되었습니다.</p>
+    <a class="btn btn-primary btn-lg" href="#card-deck" role="button">Getting Started</a>
+</div>
+
+<div class="card-deck">
+
+    <div class="card" style="width: 18rem;">
+        <img th:src="@{/icons/project.svg}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Project</h5>
+            <p class="card-text">다양한 프로젝트와 회고들이 담겨있는 섹션입니다.</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img th:src="@{/icons/blog.svg}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Blog</h5>
+            <p class="card-text">옵시디언으로 관리하는 세컨드브레인이 백업되어있는 공간입니다. PARA 기법에 따라 유동적으로 관리합니다.
+                <br> 또한 다양한 학습 로그가 포함되어있습니다</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img th:src="@{/icons/profile.svg}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Profile</h5>
+            <p class="card-text">기술 스택과 자기 소개가 포함된 프로필입니다.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

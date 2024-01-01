@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+:root .card{
+    border:none;
+}
+h1{
+    color: #463858;
+}
+h2{
+    color: #316afd;
+}
+h3{
+    color: #6b62f7;
+}
+h4{
+    color: #a55af1;
+}
+h5{
+    color: #df53eb;
+}
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 설정 */
+    border-bottom: 1px solid #d0acff; /* 브랜드 컬러에 맞게 설정 */
+    transition: box-shadow 0.3s ease;
+}
+.navbar-nav::after {
+    content: '';
+    display: block;
+    height: 2px; /* 구분선의 높이 설정 */
+    width: 100%; /* 구분선의 너비 설정 */
+    background: linear-gradient(90deg, #463858, #316afd, #6b62f7, #a55af1, #df53eb); /* 브랜드 컬러에 맞게 설정 */
+}
+
+.navbar-nav {
+    position: relative;
+}
+
+.navbar-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #463858, #316afd, #6b62f7, #a55af1, #df53eb);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav:hover::after {
+    width: 100%;
+}
+
+.navbar-brand {
+    height: 100px; /* Maintain the aspect ratio */
+}
+
+.navbar-brand img{
+    width: 10em;
+    height: auto;
+}
+
+body {
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.jumbotron {
+    background-image: url('https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 25px;
+    margin-bottom: auto;
+    position: relative; /* 추가된 부분 */
+}
+
+.jumbotron .display-4{
+    font-family: 'Rubik Mono One', monospace;
+    line-height:1.5;
+}
+
+.rainbow-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.btn-primary {
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+}
+
+.card-deck{
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border:none;
+}
+
+.card {
+    position: relative;
+    width: 18rem;
+    background: none;
+    float: left;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    margin-right: 20px; /* 수정된 부분 */
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-img-top{
+    max-width : 400px;
+    max-height : 500px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2f363f;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 20px; /* 이 마진을 조절하여 콘텐츠가 footer를 가리지 않도록 합니다 */
+}

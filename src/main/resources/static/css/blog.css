@@ -1,0 +1,50 @@
+.blog-post-card {
+    width: 90%;
+    border: 1px solid #a55af1;
+    transition: border 0.3s ease-in-out;
+    margin-bottom: 40px;
+}
+
+.post-thumbnail-img {
+    object-fit: cover;
+    height: 200px;
+}
+
+.blog-post-card:last-child {
+    margin-bottom: 0;
+}
+
+.blog-post-card:hover {
+    border-image: linear-gradient(45deg, #463858, #316afd, #6b62f7, #a55af1, #df53eb);
+    border-image-slice: 1;
+    transition: border 0.3s ease-in-out;
+
+    animation: shine 1s infinite linear;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0));
+    background-size: 200% auto;
+}
+
+
+
+.blog-post-card:hover h5.card-title {
+    animation: colorChange 1s infinite; /* 색상 변하는 애니메이션 적용 */
+}
+
+
+@keyframes shine{
+    to{
+        background-position: 200% center;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #463858; /* 초기 색상 */
+    }
+    50% {
+        color: #7c43b2; /* 중간 색상 */
+    }
+    100% {
+        color: #463858; /* 최종 색상 (다시 초기 색상으로) */
+    }
+}

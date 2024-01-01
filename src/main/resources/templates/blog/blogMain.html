@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link th:href="@{/css/blog.css}" rel="stylesheet"/>
+    <script defer type="text/javascript" th:src="@{/node_modules/jquery/dist/jquery.min.js}"></script>
+    <script defer type="text/javascript" th:src="@{/js/style.js}"></script>
+    <link th:href="@{/node_modules/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet"/>
+    <title>Your Website</title>
+</head>
+<body>
+<div th:insert="/fragment/fragmentNavs::fragment-nav"></div>
+
+<div th:insert="/fragment/fragmentFooter::fragment-footer"></div>
+
+</body>
+</html>
