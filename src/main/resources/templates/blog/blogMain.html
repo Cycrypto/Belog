@@ -11,8 +11,52 @@
     <title>Your Website</title>
 </head>
 <body>
-<div th:insert="/fragment/fragmentNavs::fragment-nav"></div>
+<header>
+    <div th:insert="/fragment/fragmentNavs::fragment-nav"></div>
+</header>
+<main class="container mt-4">
+    <div class="row g-4">
+        <!-- Left Section - Blog -->
+        <div class="col-md-8">
+            <h2>Blog Posts</h2>
 
+            <!-- Custom Blog Post Card -->
+            <div class="card blog-post-card">
+                <img src="https://placekitten.com/500/300" class="post-thumbnail-img" alt="썸네일 이미지">
+                <div class="card-body">
+                    <h5 class="card-title">Blog Post Title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+
+
+            <div class="card blog-post-card">
+                <div class="card-body">
+                    <h5 class="card-title">Blog Post Title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+
+            <!-- End Custom Blog Post Card -->
+            <!-- Add more blog posts as needed -->
+        </div>
+
+        <!-- Right Section - Categories -->
+        <div class="col-md-4">
+            <h2>Categories</h2>
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Category 1</a></li>
+                        <li class="list-group-item"><a href="#">Category 2</a></li>
+                        <li class="list-group-item"><a href="#">Category 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer -->
 <div th:insert="/fragment/fragmentFooter::fragment-footer"></div>
 
 </body>
